@@ -15,9 +15,16 @@ class ResCompany(models.Model):
     _inherit = "res.company"
 
     SCSS_TEMPLATE = """
+        .o_navbar_apps_menu {
+            > .dropdown-menu .o_app a {
+                color: %(color_navbar_text)s !important;
+            }
+        }
         .o_main_navbar {
           background-color: %(color_navbar_bg)s !important;
           color: %(color_navbar_text)s !important;
+          border-bottom: 1px solid %(color_navbar_bg_hover)s;
+          
             > .o_menu_sections .dropdown .dropdown-toggle, .o_main_navbar .o_menu_systray .dropdown .dropdown-toggle, .o_main_navbar .o_nav_entry, .o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_systray .o_nav_entry, .o_main_navbar .o_menu_toggle, .o_main_navbar .o_menu_brand {
                 color: %(color_navbar_text)s !important;
             }
