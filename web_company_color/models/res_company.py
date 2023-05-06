@@ -56,7 +56,7 @@ class ResCompany(models.Model):
               }
             }
           }
-            > .o_navbar_apps_menu .dropdown-menu {
+            > .o_navbar_apps_menu .dropdown-menu-custom {
             background: url("/web_responsive/static/src/img/home-menu-bg-overlay.svg"),
             linear-gradient(
                 to bottom,
