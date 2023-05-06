@@ -18,9 +18,22 @@ class ResCompany(models.Model):
         .o_main_navbar {
           background-color: %(color_navbar_bg)s !important;
           color: %(color_navbar_text)s !important;
-
+            > .o_menu_sections .dropdown .dropdown-toggle, .o_main_navbar .o_menu_systray .dropdown .dropdown-toggle, .o_main_navbar .o_nav_entry, .o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_systray .o_nav_entry, .o_main_navbar .o_menu_toggle, .o_main_navbar .o_menu_brand {
+                color: %(color_navbar_text)s !important;
+            }
+            > .o_menu_sections .o_nav_entry {
+                color: %(color_navbar_text)s !important;
+                font-weight:600;
+            }
+            > .dropdown .dropdown-toggle {
+                color: %(color_navbar_text)s !important;
+            }
+            > .o_menu_systray .dropdown .dropdown-toggle {
+                color: %(color_navbar_text)s !important;
+            }
           > .o_menu_brand {
             color: %(color_navbar_text)s !important;
+            font-weight: 600;
             &:hover, &:focus, &:active, &:focus:active {
               background-color: %(color_navbar_bg_hover)s !important;
             }
@@ -42,6 +55,14 @@ class ResCompany(models.Model):
                 }
               }
             }
+          }
+            > .o_navbar_apps_menu .dropdown-menu {
+            background: url("/web_responsive/static/src/img/home-menu-bg-overlay.svg"),
+            linear-gradient(
+                to bottom,
+                %(color_navbar_bg)s,
+                desaturate(lighten(%(color_navbar_bg)s , 20%%), 15)
+            );
           }
         }
     """
